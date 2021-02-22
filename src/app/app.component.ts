@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { sealed } from 'src/core/decorators/sealed';
+import { SealedDemo } from 'src/core/decorators/sealed-demo';
 
 /**
  * Decorators will be called before the class is
@@ -8,7 +8,6 @@ import { sealed } from 'src/core/decorators/sealed';
  * var obj = new AppComponent();
  *
  */
-@sealed
 @Component({
   selector: 'atb-root',
   templateUrl: './app.component.html',
@@ -16,9 +15,26 @@ import { sealed } from 'src/core/decorators/sealed';
 })
 export class AppComponent {
   title = 'angular-training-batch';
-  message = 'Hello world';
 
   constructor() {
-    delete (this as any)['message'];
+    this.demonstrateSealed();
+  }
+
+  /**
+   *
+   * Real use-cases of decorators
+  validate(@validate firstName: string, @validate lastName: string) {
+
+  }
+  **/
+  demonstrateSealed() {
+    try {
+      const sealedDemo = new SealedDemo('Sumit');
+      sealedDemo.greet();
+      delete (SealedDemo.prototype as any).greet;
+      // (SealedDemo.prototype as any).name = 'Hello world';
+      console.log(Object.isSealed(SealedDemo));
+      // delete (this as any)['message'];
+    } catch (error) {}
   }
 }
