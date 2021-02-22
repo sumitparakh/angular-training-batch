@@ -1,4 +1,4 @@
-## Assignment 2
+## Assignment 1
 
 Explore `ng generate` commands
 https://angular.io/cli/generate
