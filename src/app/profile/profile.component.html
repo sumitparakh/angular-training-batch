@@ -5,3 +5,9 @@
     sumit
 {{ profileData | json }}
 </pre>
+
+<!-- <h1>{{ "1" | number }}</h1> -->
+
+<pre *ngIf="profileObservable">
+  {{ (profileObservable | async)?.results | json }}
+</pre>

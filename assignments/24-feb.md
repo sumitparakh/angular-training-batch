@@ -32,3 +32,6 @@ https://api.github.com/
 
 3. Show its response in the template
 
+## Assignment 6
+
+Explore optional chaining (ES6)
