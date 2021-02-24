@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BalanceModule } from './balance/balance.module';
 import { HelloComponent } from './hello/hello.component';
+import { ProfileModule } from './profile/profile.module';
 /**
  * Main application module
  *
@@ -16,7 +17,9 @@ import { HelloComponent } from './hello/hello.component';
   ],
   imports: [
     BrowserModule,
-    BalanceModule
+    BalanceModule,
+    HttpClientModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,10 @@
 <atb-hello></atb-hello>
 
-<atb-balance></atb-balance>
+<button (click)="onBalanceBlick()" (dblclick)="onBalanceDblClick()">
+  Toggle Balance Component
+</button>
+
+<atb-balance *ngIf="toggleBalance"></atb-balance>
+<atb-balance *ngIf="toggleBalance"></atb-balance>
+
+<atb-profile></atb-profile>

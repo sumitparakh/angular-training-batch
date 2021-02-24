@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SealedDemo } from 'src/core/decorators/sealed-demo';
+import { Demo } from './demo';
 
 /**
  * Decorators will be called before the class is
@@ -16,8 +17,18 @@ import { SealedDemo } from 'src/core/decorators/sealed-demo';
 export class AppComponent {
   title = 'angular-training-batch';
 
+  toggleBalance = false;
+
   constructor() {
     this.demonstrateSealed();
+  }
+
+  onBalanceBlick(): void {
+    this.toggleBalance = !this.toggleBalance;
+  }
+
+  onBalanceDblClick(): void {
+    alert('Button double clicked');
   }
 
   /**
