@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { HttpRequestService } from '../core/http-request.service';
 
 @Component({
   selector: 'atb-profile',
@@ -12,13 +13,13 @@ export class ProfileComponent implements OnInit, OnDestroy {
   profile$?: Subscription;
   profileObservable?: Observable<any>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpRequest: HttpRequestService) {}
 
   ngOnInit(): void {}
 
   // REST Api - Protocol
   fetchProfile(): void {
-    this.profileObservable = this.http.get('https://randomuser.me/api');
+    this.profileObservable = this.httpRequest.get('https://randomuser.me/api');
 
     /* this.profile$ = this.http.get('https://randomuser.me/api').subscribe(
       (response: any) => {

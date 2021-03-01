@@ -1,3 +1,5 @@
-50$
+{{ balance }}$
 
+<input type="text" #balRef placeholder="Update balance" (keyup)="updateBalance(balRef.value)" />
+<button (click)="updateBalance(balRef.value)">Update Balance</button>
 <atb-user-balance></atb-user-balance>

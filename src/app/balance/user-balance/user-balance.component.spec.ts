@@ -2,6 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserBalanceComponent } from './user-balance.component';
 
+/**
+ * Test cases validate our UI and/or business logic
+ */
 describe('UserBalanceComponent', () => {
   let component: UserBalanceComponent;
   let fixture: ComponentFixture<UserBalanceComponent>;
