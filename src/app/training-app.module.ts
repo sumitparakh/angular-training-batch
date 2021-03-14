@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BalanceModule } from './balance/balance.module';
 import { HelloComponent } from './hello/hello.component';
 import { ProfileModule } from './profile/profile.module';
+import { PipesModule } from './pipes/pipes.module';
 /**
  * Main application module
  *
@@ -19,7 +20,8 @@ import { ProfileModule } from './profile/profile.module';
     BrowserModule,
     BalanceModule,
     HttpClientModule,
-    ProfileModule
+    ProfileModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

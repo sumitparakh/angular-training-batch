@@ -1,0 +1,12 @@
+<p>pipes works!</p>
+
+{{ numArray | addArray: numArray.length }}
+
+{{ "helloworld" | uppercase }}
+{{ currentDate | date }}
+
+<!-- {{new Date().}} -->
+<br />
+
+<input type="text" #numItem placeholder="Add number item" />
+<button (click)="addItem(numItem.value)">Add Item To Array</button>
