@@ -1,0 +1,39 @@
+<h1>
+  Contact Form:-
+  <hr />
+</h1>
+{{ contactForm.value | json }}
+<form [formGroup]="contactForm">
+  <section class="error-section" *ngIf="hasFormErrors">
+    <ul>
+      <li *ngIf="!!contactForm.controls.email.errors">Invalid email!</li>
+      <li *ngIf="!!contactForm.controls.pincode.errors">Invalid pincode</li>
+    </ul>
+  </section>
+
+  <!-- <div class="form-group"> -->
+  <input formControlName="name" type="text" name="name" placeholder="Name" />
+  <!-- </div> -->
+  <input
+    formControlName="email"
+    class="{{!!contactForm.controls.email.errors ? 'error' : ''}}"
+    [ngClass]="hasEmailError"
+    type="email"
+    name="email"
+    placeholder="Email"
+  />
+  <input
+    formControlName="contact"
+    type="text"
+    name="contact"
+    placeholder="Contact"
+  />
+  <input
+    formControlName="pincode"
+    type="text"
+    [ngClass]="{ error: !!contactForm.controls.pincode.errors }"
+    name="pincode"
+    placeholder="Pincode"
+  />
+  <button type="button" (click)="saveContactForm()">Save</button>
+</form>

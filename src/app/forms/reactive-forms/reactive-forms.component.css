@@ -1,0 +1,32 @@
+.error {
+  border-color: red;
+  outline: none;
+}
+
+.error:focus {
+  border-color: red;
+  outline: none;
+}
+
+.form-group {
+  display: inline-block;
+}
+
+form input {
+  margin: 10px;
+}
+
+input {
+  padding: 10px;
+}
+
+.error-section {
+  padding: 1px;
+  background: #f5c1c1;
+  border-color: black;
+}
+
+.error-section li {
+  color: red;
+  font-weight: bold;
+}
