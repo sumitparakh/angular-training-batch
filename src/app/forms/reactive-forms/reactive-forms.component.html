@@ -2,7 +2,9 @@
   Contact Form:-
   <hr />
 </h1>
-{{ contactForm.value | json }}
+<pre
+  >{{ contactForm.value | json }}
+</pre>
 <form [formGroup]="contactForm">
   <section class="error-section" *ngIf="hasFormErrors">
     <ul>
@@ -16,7 +18,7 @@
   <!-- </div> -->
   <input
     formControlName="email"
-    class="{{!!contactForm.controls.email.errors ? 'error' : ''}}"
+    class="{{ !!contactForm.controls.email.errors ? 'error' : '' }}"
     [ngClass]="hasEmailError"
     type="email"
     name="email"
@@ -35,5 +37,14 @@
     name="pincode"
     placeholder="Pincode"
   />
+
+  <button (click)="addAddress()">Add Address</button>
+  <div formArrayName="addresses" *ngFor="let item of addresses">
+    <div [formGroup]="item">
+      <input type="text" formControlName="streetname" name="streetname" />
+      <input type="text" formControlName="pincode" name="pincode" />
+    </div>
+  </div>
+
   <button type="button" (click)="saveContactForm()">Save</button>
 </form>

@@ -7,15 +7,29 @@ import { HelloComponent } from './hello/hello.component';
 import { ProfileModule } from './profile/profile.module';
 import { PipesModule } from './pipes/pipes.module';
 import { FormsModule } from './forms/forms.module';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 /**
  * Main application module
  *
  * Any function, starting with '@' is called a decorator
  */
+
+const routes: Routes = [
+  {
+    path: '', component: HomeComponent
+  },
+  {
+    path: 'about', component: HelloComponent
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +37,8 @@ import { FormsModule } from './forms/forms.module';
     HttpClientModule,
     ProfileModule,
     PipesModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

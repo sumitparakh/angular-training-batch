@@ -1,17 +1,5 @@
-<atb-hello></atb-hello>
-
-<h1>Pipes
-</h1>
--------------------------------------
-<atb-pipes></atb-pipes>
-
-<button (click)="onBalanceBlick()" (dblclick)="onBalanceDblClick()">
-  Toggle Balance Component
-</button>
-
-<br />
-<atb-balance *ngIf="toggleBalance"></atb-balance>
-
-<atb-profile></atb-profile>
-
-<atb-reactive-forms></atb-reactive-forms>
+<ul>
+  <li><a [routerLink]="['/']" routerLinkActive="router-link-active" >Home</a> </li>
+  <li><a [routerLink]="['/about']" routerLinkActive="router-link-active" >About</a> </li>
+</ul>
+<router-outlet></router-outlet>
