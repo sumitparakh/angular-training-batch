@@ -1,1 +1,24 @@
+{{ "Name: " + name }}
 <p>hello works!</p>
+<!-- [(ngModel)] -->
+<!-- Directives starting from '*' are called structural directive -->
+<!-- <div [(hide)]="toggle">This div will be rendered in DOM</div> -->
+<div></div>
+<input type="text" name="" id="">
+<button (click)="toggle = !toggle">Toggle Div</button>
+
+<!-- Directives starting from square brackets or like normal arguments are called attribute directive -->
+<div class="" style="border: 1px; color: aliceblue">
+  Native attribute implementation
+</div>
+
+<div
+  [ngClass]="{}"
+  [class]="'my-class'"
+  [ngStyle]="{ border: '1px', color: colorStyleMapping[colorIndex] }"
+>
+  Angular specific attribute directive
+</div>
+<button (click)="incrementColorCounter()">Increment Color Counter</button>
+
+<div atbHighlight="blue" _title="My Div Element">My Directive</div>

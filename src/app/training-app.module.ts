@@ -10,6 +10,8 @@ import { FormsModule } from './forms/forms.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { HideDirective } from './directives/hide.directive';
 /**
  * Main application module
  *
@@ -29,7 +31,9 @@ const routes: Routes = [
     AppComponent,
     HelloComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    HighlightDirective,
+    HideDirective
   ],
   imports: [
     BrowserModule,

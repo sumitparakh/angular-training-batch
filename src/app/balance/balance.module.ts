@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BalanceComponent } from './balance.component';
 import { UserBalanceComponent } from './user-balance/user-balance.component';
 
